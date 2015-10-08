@@ -1,19 +1,37 @@
 //
-//  LoginViewController.swift
+//  SignUpViewController.swift
 //  Get_Pizza
 //
 //  Created by Jonathan Green on 10/7/15.
-//  Copyright (c) 2015 Jonathan Green. All rights reserved.
+//  Copyright © 2015 Jonathan Green. All rights reserved.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class SignUpViewController: UIViewController {
 
+    @IBOutlet weak var username: UITextField!
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var phone: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        username.resignFirstResponder()
+        password.resignFirstResponder()
+        email.resignFirstResponder()
+        phone.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        
+        return true
     }
 
     override func didReceiveMemoryWarning() {

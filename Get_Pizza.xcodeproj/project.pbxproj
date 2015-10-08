@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6868350F1BC5DF7E005FBC96 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6868350E1BC5DF7E005FBC96 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		68697B2E1BC5C0EE00DEA9C6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68697B2D1BC5C0EE00DEA9C6 /* SignUpViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		68A868111BC5E1030094E918 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68A8680F1BC5E1030094E918 /* LaunchScreen.xib */; settings = {ASSET_TAGS = (); }; };
+		68A868121BC5E1030094E918 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68A868101BC5E1030094E918 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
 		68AFFB611BC591F700901C46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AFFB601BC591F700901C46 /* AppDelegate.swift */; };
-		68AFFB631BC591F700901C46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AFFB621BC591F700901C46 /* ViewController.swift */; };
-		68AFFB661BC591F700901C46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68AFFB641BC591F700901C46 /* Main.storyboard */; };
 		68AFFB681BC591F700901C46 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68AFFB671BC591F700901C46 /* Images.xcassets */; };
-		68AFFB6B1BC591F700901C46 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68AFFB691BC591F700901C46 /* LaunchScreen.xib */; };
 		68AFFB771BC591F800901C46 /* Get_PizzaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AFFB761BC591F800901C46 /* Get_PizzaTests.swift */; };
+		68AFFB811BC592E200901C46 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AFFB801BC592E200901C46 /* LoginViewController.swift */; };
+		68FC269F1BC59BF00095361F /* CustomButtonOrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FC269E1BC59BF00095361F /* CustomButtonOrView.swift */; };
+		CC2CEBBD19A473BD6681AA61 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 334C1BF8D1F444BCE87CDAE7 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +30,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		334C1BF8D1F444BCE87CDAE7 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68000A5B157CA4AE4F9279AD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		6868350E1BC5DF7E005FBC96 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		68697B2D1BC5C0EE00DEA9C6 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		68A8680F1BC5E1030094E918 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		68A868101BC5E1030094E918 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		68AFFB5B1BC591F700901C46 /* Get_Pizza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Get_Pizza.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68AFFB5F1BC591F700901C46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68AFFB601BC591F700901C46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		68AFFB621BC591F700901C46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		68AFFB651BC591F700901C46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		68AFFB671BC591F700901C46 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		68AFFB6A1BC591F700901C46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		68AFFB701BC591F800901C46 /* Get_PizzaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Get_PizzaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68AFFB751BC591F800901C46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68AFFB761BC591F800901C46 /* Get_PizzaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Get_PizzaTests.swift; sourceTree = "<group>"; };
+		68AFFB801BC592E200901C46 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		68FC269E1BC59BF00095361F /* CustomButtonOrView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonOrView.swift; sourceTree = "<group>"; };
+		F3C9101EF1F68A4ACB592A4F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC2CEBBD19A473BD6681AA61 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +67,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01D6127BA06EF83C8AEC99A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				334C1BF8D1F444BCE87CDAE7 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		686835101BC5DFB0005FBC96 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				68A8680F1BC5E1030094E918 /* LaunchScreen.xib */,
+				68A868101BC5E1030094E918 /* Main.storyboard */,
+				686835111BC5DFC5005FBC96 /* ViewControllres */,
+				686835121BC5DFDA005FBC96 /* Custome */,
+			);
+			name = UI;
+			path = /Users/Jonathan_Green/Documents/Get_Pizza/Get_Pizza/UI;
+			sourceTree = "<absolute>";
+		};
+		686835111BC5DFC5005FBC96 /* ViewControllres */ = {
+			isa = PBXGroup;
+			children = (
+				6868350E1BC5DF7E005FBC96 /* HomeViewController.swift */,
+				68AFFB801BC592E200901C46 /* LoginViewController.swift */,
+				68697B2D1BC5C0EE00DEA9C6 /* SignUpViewController.swift */,
+			);
+			name = ViewControllres;
+			path = /Users/Jonathan_Green/Documents/Get_Pizza/Get_Pizza/UI/ViewControllers;
+			sourceTree = "<absolute>";
+		};
+		686835121BC5DFDA005FBC96 /* Custome */ = {
+			isa = PBXGroup;
+			children = (
+				68FC269E1BC59BF00095361F /* CustomButtonOrView.swift */,
+			);
+			name = Custome;
+			path = /Users/Jonathan_Green/Documents/Get_Pizza/Get_Pizza/UI/Custome;
+			sourceTree = "<absolute>";
+		};
 		68AFFB521BC591F700901C46 = {
 			isa = PBXGroup;
 			children = (
 				68AFFB5D1BC591F700901C46 /* Get_Pizza */,
 				68AFFB731BC591F800901C46 /* Get_PizzaTests */,
 				68AFFB5C1BC591F700901C46 /* Products */,
+				A46BA99DACC3960A12A97D7D /* Pods */,
+				01D6127BA06EF83C8AEC99A2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,10 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				68AFFB601BC591F700901C46 /* AppDelegate.swift */,
-				68AFFB621BC591F700901C46 /* ViewController.swift */,
-				68AFFB641BC591F700901C46 /* Main.storyboard */,
+				686835101BC5DFB0005FBC96 /* UI */,
 				68AFFB671BC591F700901C46 /* Images.xcassets */,
-				68AFFB691BC591F700901C46 /* LaunchScreen.xib */,
 				68AFFB5E1BC591F700901C46 /* Supporting Files */,
 			);
 			path = Get_Pizza;
@@ -112,6 +163,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A46BA99DACC3960A12A97D7D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				68000A5B157CA4AE4F9279AD /* Pods.debug.xcconfig */,
+				F3C9101EF1F68A4ACB592A4F /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +179,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68AFFB7A1BC591F800901C46 /* Build configuration list for PBXNativeTarget "Get_Pizza" */;
 			buildPhases = (
+				96DCED3B8420A17DB7B5ED3B /* Check Pods Manifest.lock */,
 				68AFFB571BC591F700901C46 /* Sources */,
 				68AFFB581BC591F700901C46 /* Frameworks */,
 				68AFFB591BC591F700901C46 /* Resources */,
+				1F58006641CE0083023378F4 /* Embed Pods Frameworks */,
+				E4336AB4687C09A045C47ABC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -156,6 +219,8 @@
 		68AFFB531BC591F700901C46 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Jonathan Green";
 				TargetAttributes = {
@@ -192,8 +257,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68AFFB661BC591F700901C46 /* Main.storyboard in Resources */,
-				68AFFB6B1BC591F700901C46 /* LaunchScreen.xib in Resources */,
+				68A868121BC5E1030094E918 /* Main.storyboard in Resources */,
+				68A868111BC5E1030094E918 /* LaunchScreen.xib in Resources */,
 				68AFFB681BC591F700901C46 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,12 +272,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1F58006641CE0083023378F4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96DCED3B8420A17DB7B5ED3B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E4336AB4687C09A045C47ABC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		68AFFB571BC591F700901C46 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68AFFB631BC591F700901C46 /* ViewController.swift in Sources */,
+				6868350F1BC5DF7E005FBC96 /* HomeViewController.swift in Sources */,
+				68FC269F1BC59BF00095361F /* CustomButtonOrView.swift in Sources */,
+				68AFFB811BC592E200901C46 /* LoginViewController.swift in Sources */,
+				68697B2E1BC5C0EE00DEA9C6 /* SignUpViewController.swift in Sources */,
 				68AFFB611BC591F700901C46 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,25 +350,6 @@
 			targetProxy = 68AFFB711BC591F800901C46 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		68AFFB641BC591F700901C46 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				68AFFB651BC591F700901C46 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		68AFFB691BC591F700901C46 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				68AFFB6A1BC591F700901C46 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		68AFFB781BC591F800901C46 /* Debug */ = {
@@ -338,6 +435,7 @@
 		};
 		68AFFB7B1BC591F800901C46 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68000A5B157CA4AE4F9279AD /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Get_Pizza/Info.plist;
@@ -348,6 +446,7 @@
 		};
 		68AFFB7C1BC591F800901C46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3C9101EF1F68A4ACB592A4F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Get_Pizza/Info.plist;
@@ -409,6 +508,7 @@
 				68AFFB7C1BC591F800901C46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		68AFFB7D1BC591F800901C46 /* Build configuration list for PBXNativeTarget "Get_PizzaTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +517,7 @@
 				68AFFB7F1BC591F800901C46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,13 @@
+PODS:
+  - BTNavigationDropdownMenu (0.1.8)
+  - FXBlurView (1.6.4)
+
+DEPENDENCIES:
+  - BTNavigationDropdownMenu
+  - FXBlurView (~> 1.6.4)
+
+SPEC CHECKSUMS:
+  BTNavigationDropdownMenu: 23403214197d8fb208dd0ad996e3d236748473c9
+  FXBlurView: db786c2561cb49a09ae98407f52460096ab8a44f
+
+COCOAPODS: 0.38.2
