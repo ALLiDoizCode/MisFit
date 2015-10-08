@@ -13,7 +13,7 @@ class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDele
     
     @IBOutlet weak var tableView: UITableView!
     
-    let items = ["Most Popular", "Latest", "Trending", "Nearest", "Top Picks"]
+    let items = ["Home", "Orders", "Account", "Logout"]
     
     
     override func viewDidLoad() {
