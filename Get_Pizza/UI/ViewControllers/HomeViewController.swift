@@ -16,11 +16,7 @@ class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDele
     
     let items = ["Home", "Orders", "Account", "Logout"]
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
+    override func viewDidAppear(animated: Bool) {
         
         let menuView = BTNavigationDropdownMenu(title: items.first!, items: items)
         
@@ -30,9 +26,21 @@ class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDele
         
         menuView.didSelectItemAtIndexHandler = {(indexPath: Int) -> () in
             print("Did select item at index: \(indexPath)")
-            //self.selectedCellLabel.text = items[indexPath]
+            
+            if indexPath == 3 {
+                
+                let logout = self.storyboard!.instantiateViewControllerWithIdentifier("logout") as! LoginViewController
+                
+                self.navigationController?.showViewController(logout, sender: self)
+            }
         }
-      
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+       
         
     }
 

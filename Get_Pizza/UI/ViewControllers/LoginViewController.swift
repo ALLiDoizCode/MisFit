@@ -17,12 +17,11 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         
+        self.navigationController?.navigationBar.hidden = true
         username.delegate = self
         password.delegate = self
         
     
-        
-        
 }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
