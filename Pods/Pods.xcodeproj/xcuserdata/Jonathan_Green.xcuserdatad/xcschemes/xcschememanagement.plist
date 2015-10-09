@@ -4,12 +4,27 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>BTNavigationDropdownMenu.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FXBlurView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Parse.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,7 +42,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>24682425822E865987CD31B88BDFCE1B</key>
+		<key>1CDA9B20B74F9AA247B69EC204ADC20B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>39BEBBBCAE6C35529A44EB7A241FA3A3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -37,12 +57,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5502A8B3FE7962040D998D5BFC3AB219</key>
+		<key>6857F44FF1850656E3939B5F4CEB1814</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EAD246E0817C0EF81B669BD8953CB41E</key>
+		<key>7BDF5D0FD5D4928B2FEA35798E450BA6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D6302DC8A4F5B47B740343DC5470EC04</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E75761FB11CEC46F32D1DBD29051E213</key>
 		<dict>
 			<key>primary</key>
 			<true/>

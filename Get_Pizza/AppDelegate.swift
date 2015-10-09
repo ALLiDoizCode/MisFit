@@ -8,6 +8,8 @@
 
 import UIKit
 import Stripe
+import Parse
+import Bolts
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         Stripe.setDefaultPublishableKey("pk_test_31o76ehdqsOT6MXij7Y9p4h0")
+        
+        Parse.enableLocalDatastore()
+        
+        // Initialize Parse.
+        Parse.setApplicationId("JiYUIU37P25yi29Yu5UzimqLBA4C8gY8rJccXgGt",
+            clientKey: "o2sLQdMXCzNilPVvhy30HgOV7ZEp3AEemEq0rAaq")
+        
+        // [Optional] Track statistics around application opens.
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
         return true
     }

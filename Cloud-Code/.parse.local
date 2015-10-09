@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "MisFit": {
+      "applicationId": "JiYUIU37P25yi29Yu5UzimqLBA4C8gY8rJccXgGt"
+    },
+    "_default": {
+      "link": "MisFit"
+    }
+  }
+}

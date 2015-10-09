@@ -8,6 +8,9 @@
 
 import UIKit
 import Stripe
+import Alamofire
+import Parse
+import Bolts
 
 class PayViewController: UIViewController,UITableViewDelegate,UITextFieldDelegate,STPPaymentCardTextFieldDelegate {
     
@@ -59,14 +62,14 @@ class PayViewController: UIViewController,UITableViewDelegate,UITextFieldDelegat
                     
                     if stripeError == nil {
                         
-                       print(token!)
+                       //print(token!)
+                        
+                        self.postStripeToken(token!)
                         
                     }else {
                         
                         self.handleError(stripeError!)
                     }
-                    
-                    //self.createBackendChargeWithToken(token!, completion: nil)
             })
         } catch {
             print("there is error.")
@@ -96,6 +99,23 @@ class PayViewController: UIViewController,UITableViewDelegate,UITextFieldDelegat
             delegate: nil,
             cancelButtonTitle: "OK").show()
         
+    }
+    
+    func postStripeToken(token: STPToken) {
+        
+        let params = ["token": token.tokenId]
+
+        PFCloud.callFunctionInBackground("hello", withParameters: params) { (Response, error) -> Void in
+            
+            if (error != nil) {
+                
+                print(Response)
+            }else {
+                
+                print(Response)
+            }
+        }
+
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
