@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68609DEB1BC72B15004ADF65 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68609DEA1BC72B15004ADF65 /* HomeCell.swift */; settings = {ASSET_TAGS = (); }; };
+		68609DEE1BC75367004ADF65 /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68609DED1BC75367004ADF65 /* PayViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		6868350F1BC5DF7E005FBC96 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6868350E1BC5DF7E005FBC96 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		68697B2E1BC5C0EE00DEA9C6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68697B2D1BC5C0EE00DEA9C6 /* SignUpViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		6892A6A21BC762FE00C3FEC6 /* ZFRippleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6892A6A11BC762FE00C3FEC6 /* ZFRippleButton.swift */; settings = {ASSET_TAGS = (); }; };
 		68A868111BC5E1030094E918 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68A8680F1BC5E1030094E918 /* LaunchScreen.xib */; settings = {ASSET_TAGS = (); }; };
 		68A868121BC5E1030094E918 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68A868101BC5E1030094E918 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
 		68AFFB611BC591F700901C46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AFFB601BC591F700901C46 /* AppDelegate.swift */; };
@@ -32,8 +35,12 @@
 /* Begin PBXFileReference section */
 		334C1BF8D1F444BCE87CDAE7 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68000A5B157CA4AE4F9279AD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		68609DEA1BC72B15004ADF65 /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		68609DEC1BC72D7D004ADF65 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		68609DED1BC75367004ADF65 /* PayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
 		6868350E1BC5DF7E005FBC96 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		68697B2D1BC5C0EE00DEA9C6 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		6892A6A11BC762FE00C3FEC6 /* ZFRippleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZFRippleButton.swift; path = ../ViewControllers/ZFRippleButton.swift; sourceTree = "<group>"; };
 		68A8680F1BC5E1030094E918 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		68A868101BC5E1030094E918 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		68AFFB5B1BC591F700901C46 /* Get_Pizza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Get_Pizza.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,9 +82,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		68609DE91BC72AD1004ADF65 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				68609DEA1BC72B15004ADF65 /* HomeCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		686835101BC5DFB0005FBC96 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				68609DE91BC72AD1004ADF65 /* Cells */,
 				68A8680F1BC5E1030094E918 /* LaunchScreen.xib */,
 				68A868101BC5E1030094E918 /* Main.storyboard */,
 				686835111BC5DFC5005FBC96 /* ViewControllres */,
@@ -93,6 +109,7 @@
 				6868350E1BC5DF7E005FBC96 /* HomeViewController.swift */,
 				68AFFB801BC592E200901C46 /* LoginViewController.swift */,
 				68697B2D1BC5C0EE00DEA9C6 /* SignUpViewController.swift */,
+				68609DED1BC75367004ADF65 /* PayViewController.swift */,
 			);
 			name = ViewControllres;
 			path = /Users/Jonathan_Green/Documents/Get_Pizza/Get_Pizza/UI/ViewControllers;
@@ -101,6 +118,7 @@
 		686835121BC5DFDA005FBC96 /* Custome */ = {
 			isa = PBXGroup;
 			children = (
+				6892A6A11BC762FE00C3FEC6 /* ZFRippleButton.swift */,
 				68FC269E1BC59BF00095361F /* CustomButtonOrView.swift */,
 			);
 			name = Custome;
@@ -110,6 +128,7 @@
 		68AFFB521BC591F700901C46 = {
 			isa = PBXGroup;
 			children = (
+				68609DEC1BC72D7D004ADF65 /* Header.h */,
 				68AFFB5D1BC591F700901C46 /* Get_Pizza */,
 				68AFFB731BC591F800901C46 /* Get_PizzaTests */,
 				68AFFB5C1BC591F700901C46 /* Products */,
@@ -326,10 +345,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6868350F1BC5DF7E005FBC96 /* HomeViewController.swift in Sources */,
+				68609DEE1BC75367004ADF65 /* PayViewController.swift in Sources */,
 				68FC269F1BC59BF00095361F /* CustomButtonOrView.swift in Sources */,
 				68AFFB811BC592E200901C46 /* LoginViewController.swift in Sources */,
 				68697B2E1BC5C0EE00DEA9C6 /* SignUpViewController.swift in Sources */,
+				68609DEB1BC72B15004ADF65 /* HomeCell.swift in Sources */,
 				68AFFB611BC591F700901C46 /* AppDelegate.swift in Sources */,
+				6892A6A21BC762FE00C3FEC6 /* ZFRippleButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +463,7 @@
 				INFOPLIST_FILE = Get_Pizza/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/Jonathan_Green/Documents/Get_Pizza/Header.h;
 			};
 			name = Debug;
 		};
@@ -452,6 +475,7 @@
 				INFOPLIST_FILE = Get_Pizza/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/Jonathan_Green/Documents/Get_Pizza/Header.h;
 			};
 			name = Release;
 		};
