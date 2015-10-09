@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		681838C51BC8619C0063910E /* SweetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681838C41BC8619C0063910E /* SweetAlert.swift */; settings = {ASSET_TAGS = (); }; };
 		68609DEB1BC72B15004ADF65 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68609DEA1BC72B15004ADF65 /* HomeCell.swift */; settings = {ASSET_TAGS = (); }; };
 		68609DEE1BC75367004ADF65 /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68609DED1BC75367004ADF65 /* PayViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		6868350F1BC5DF7E005FBC96 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6868350E1BC5DF7E005FBC96 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		334C1BF8D1F444BCE87CDAE7 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68000A5B157CA4AE4F9279AD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		681838C41BC8619C0063910E /* SweetAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
 		68609DEA1BC72B15004ADF65 /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		68609DEC1BC72D7D004ADF65 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		68609DED1BC75367004ADF65 /* PayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		686835121BC5DFDA005FBC96 /* Custome */ = {
 			isa = PBXGroup;
 			children = (
+				681838C41BC8619C0063910E /* SweetAlert.swift */,
 				6892A6A11BC762FE00C3FEC6 /* ZFRippleButton.swift */,
 				68FC269E1BC59BF00095361F /* CustomButtonOrView.swift */,
 			);
@@ -346,6 +349,7 @@
 			files = (
 				6868350F1BC5DF7E005FBC96 /* HomeViewController.swift in Sources */,
 				68609DEE1BC75367004ADF65 /* PayViewController.swift in Sources */,
+				681838C51BC8619C0063910E /* SweetAlert.swift in Sources */,
 				68FC269F1BC59BF00095361F /* CustomButtonOrView.swift in Sources */,
 				68AFFB811BC592E200901C46 /* LoginViewController.swift in Sources */,
 				68697B2E1BC5C0EE00DEA9C6 /* SignUpViewController.swift in Sources */,

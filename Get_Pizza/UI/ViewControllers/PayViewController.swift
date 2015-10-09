@@ -107,12 +107,20 @@ class PayViewController: UIViewController,UITableViewDelegate,UITextFieldDelegat
 
         PFCloud.callFunctionInBackground("hello", withParameters: params) { (Response, error) -> Void in
             
-            if (error != nil) {
+            if (error == nil) {
                 
                 print(Response)
-            }else {
+                
+                SweetAlert().showAlert("Charge Success", subTitle: "Thanks For Saving A Misfit Pizza!", style: AlertStyle.Success)
+                
+                
+                }else {
                 
                 print(Response)
+                
+                SweetAlert().showAlert("Something Went Wrong", subTitle: ":(", style: AlertStyle.Error)
+                
+                
             }
         }
 

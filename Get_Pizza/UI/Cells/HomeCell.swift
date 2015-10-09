@@ -15,7 +15,7 @@ class HomeCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        applePayBtn.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
+        applePayBtn.imageView?.contentMode = UIViewContentMode.ScaleAspectFill
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
