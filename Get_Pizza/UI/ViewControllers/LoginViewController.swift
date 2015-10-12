@@ -10,16 +10,24 @@ import UIKit
 
 class LoginViewController: UIViewController,UITextFieldDelegate {
 
+    @IBOutlet weak var login: DesignableButton!
     
     @IBOutlet weak var username: UITextField!
 
     @IBOutlet weak var password: UITextField!
     
-    override func viewDidLoad() {
+    
+    override func viewWillAppear(animated: Bool) {
         
-        self.navigationController?.navigationBar.hidden = true
+        self.navigationController?.navigationBarHidden = true
+    }
+    
+    override func viewDidLoad() {
+    
         username.delegate = self
         password.delegate = self
+        
+        login.addTarget(self, action: "goToHome", forControlEvents: .TouchUpInside)
         
     
 }
@@ -35,6 +43,14 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
 
         return true
     }
+    
+    
+    func goToHome() {
+        
+        let home = self.storyboard!.instantiateViewControllerWithIdentifier("home") as! HomeViewController
+        self.navigationController?.radialPushViewController(home)
+    }
+    
     /*
     // MARK: - Navigation
 

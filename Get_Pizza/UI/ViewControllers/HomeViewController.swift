@@ -16,6 +16,13 @@ class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDele
     
     let items = ["Home", "Orders", "Account", "Logout"]
     
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        self.navigationController?.navigationBarHidden = false
+        self.navigationItem.setHidesBackButton(true, animated: false)
+    }
+    
     override func viewDidAppear(animated: Bool) {
         
         let menuView = BTNavigationDropdownMenu(title: items.first!, items: items)
@@ -29,9 +36,13 @@ class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDele
             
             if indexPath == 3 {
                 
+                self.navigationController?.navigationBarHidden = true
+                
                 let logout = self.storyboard!.instantiateViewControllerWithIdentifier("logout") as! LoginViewController
                 
-                self.navigationController?.showViewController(logout, sender: self)
+                self.navigationController?.radialPushViewController(logout)
+           
+                
             }
         }
     }
@@ -40,7 +51,7 @@ class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+        self.navigationController?.enableRadialSwipe()
         
     }
 
@@ -56,10 +67,13 @@ class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDele
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("homeCell")
+        let cell = tableView.dequeueReusableCellWithIdentifier("homeCell") as! HomeCell
         
+        cell.cardPayBtn.addTarget(self, action: "goToCardPay", forControlEvents: .TouchUpInside)
         
-        return cell!
+    
+        
+        return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -67,6 +81,12 @@ class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDele
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
+    
+    func goToCardPay() {
+        
+        let pay = self.storyboard!.instantiateViewControllerWithIdentifier("pay") as! PayViewController
+        self.navigationController?.radialPushViewController(pay)
+    }
     
     
     /*

@@ -277,6 +277,11 @@ public class BTNavigationDropdownMenu: UIView {
     }
     
     func showMenu() {
+        
+        self.tableView.hidden = false
+        self.topSeparator.hidden = false
+        self.backgroundView.hidden = true
+        
         self.menuWrapper.frame.origin.y = self.navigationController!.navigationBar.frame.maxY
         
         // Table view header
@@ -315,6 +320,11 @@ public class BTNavigationDropdownMenu: UIView {
     }
     
     func hideMenu() {
+        
+        self.tableView.hidden = true
+        self.topSeparator.hidden = true
+        self.backgroundView.hidden = true
+        
         // Rotate arrow
         self.rotateArrow()
         

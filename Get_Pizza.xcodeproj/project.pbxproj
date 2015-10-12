@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		681838C51BC8619C0063910E /* SweetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681838C41BC8619C0063910E /* SweetAlert.swift */; settings = {ASSET_TAGS = (); }; };
+		6854EE5E1BCB58D3008AA40D /* AAPTransactionDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6854EE5B1BCB58D3008AA40D /* AAPTransactionDirector.swift */; settings = {ASSET_TAGS = (); }; };
+		6854EE5F1BCB58D3008AA40D /* UINavigationController+RadialTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6854EE5C1BCB58D3008AA40D /* UINavigationController+RadialTransaction.swift */; settings = {ASSET_TAGS = (); }; };
+		6854EE601BCB58D3008AA40D /* UIView+Radial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6854EE5D1BCB58D3008AA40D /* UIView+Radial.swift */; settings = {ASSET_TAGS = (); }; };
 		68609DEB1BC72B15004ADF65 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68609DEA1BC72B15004ADF65 /* HomeCell.swift */; settings = {ASSET_TAGS = (); }; };
 		68609DEE1BC75367004ADF65 /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68609DED1BC75367004ADF65 /* PayViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		6868350F1BC5DF7E005FBC96 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6868350E1BC5DF7E005FBC96 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -19,6 +22,7 @@
 		68AFFB681BC591F700901C46 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68AFFB671BC591F700901C46 /* Images.xcassets */; };
 		68AFFB771BC591F800901C46 /* Get_PizzaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AFFB761BC591F800901C46 /* Get_PizzaTests.swift */; };
 		68AFFB811BC592E200901C46 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AFFB801BC592E200901C46 /* LoginViewController.swift */; };
+		68C3186F1BCB6C5D001ACB1D /* navHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C3186E1BCB6C5D001ACB1D /* navHome.swift */; settings = {ASSET_TAGS = (); }; };
 		68FC269F1BC59BF00095361F /* CustomButtonOrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FC269E1BC59BF00095361F /* CustomButtonOrView.swift */; };
 		CC2CEBBD19A473BD6681AA61 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 334C1BF8D1F444BCE87CDAE7 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -37,6 +41,9 @@
 		334C1BF8D1F444BCE87CDAE7 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68000A5B157CA4AE4F9279AD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		681838C41BC8619C0063910E /* SweetAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
+		6854EE5B1BCB58D3008AA40D /* AAPTransactionDirector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAPTransactionDirector.swift; sourceTree = "<group>"; };
+		6854EE5C1BCB58D3008AA40D /* UINavigationController+RadialTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+RadialTransaction.swift"; sourceTree = "<group>"; };
+		6854EE5D1BCB58D3008AA40D /* UIView+Radial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Radial.swift"; sourceTree = "<group>"; };
 		68609DEA1BC72B15004ADF65 /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		68609DEC1BC72D7D004ADF65 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		68609DED1BC75367004ADF65 /* PayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +60,7 @@
 		68AFFB751BC591F800901C46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68AFFB761BC591F800901C46 /* Get_PizzaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Get_PizzaTests.swift; sourceTree = "<group>"; };
 		68AFFB801BC592E200901C46 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		68C3186E1BCB6C5D001ACB1D /* navHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = navHome.swift; sourceTree = "<group>"; };
 		68FC269E1BC59BF00095361F /* CustomButtonOrView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonOrView.swift; sourceTree = "<group>"; };
 		F3C9101EF1F68A4ACB592A4F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +120,7 @@
 				68AFFB801BC592E200901C46 /* LoginViewController.swift */,
 				68697B2D1BC5C0EE00DEA9C6 /* SignUpViewController.swift */,
 				68609DED1BC75367004ADF65 /* PayViewController.swift */,
+				68C3186E1BCB6C5D001ACB1D /* navHome.swift */,
 			);
 			name = ViewControllres;
 			path = /Users/Jonathan_Green/Documents/Get_Pizza/Get_Pizza/UI/ViewControllers;
@@ -120,6 +129,9 @@
 		686835121BC5DFDA005FBC96 /* Custome */ = {
 			isa = PBXGroup;
 			children = (
+				6854EE5B1BCB58D3008AA40D /* AAPTransactionDirector.swift */,
+				6854EE5C1BCB58D3008AA40D /* UINavigationController+RadialTransaction.swift */,
+				6854EE5D1BCB58D3008AA40D /* UIView+Radial.swift */,
 				681838C41BC8619C0063910E /* SweetAlert.swift */,
 				6892A6A11BC762FE00C3FEC6 /* ZFRippleButton.swift */,
 				68FC269E1BC59BF00095361F /* CustomButtonOrView.swift */,
@@ -350,10 +362,14 @@
 				6868350F1BC5DF7E005FBC96 /* HomeViewController.swift in Sources */,
 				68609DEE1BC75367004ADF65 /* PayViewController.swift in Sources */,
 				681838C51BC8619C0063910E /* SweetAlert.swift in Sources */,
+				68C3186F1BCB6C5D001ACB1D /* navHome.swift in Sources */,
+				6854EE601BCB58D3008AA40D /* UIView+Radial.swift in Sources */,
+				6854EE5F1BCB58D3008AA40D /* UINavigationController+RadialTransaction.swift in Sources */,
 				68FC269F1BC59BF00095361F /* CustomButtonOrView.swift in Sources */,
 				68AFFB811BC592E200901C46 /* LoginViewController.swift in Sources */,
 				68697B2E1BC5C0EE00DEA9C6 /* SignUpViewController.swift in Sources */,
 				68609DEB1BC72B15004ADF65 /* HomeCell.swift in Sources */,
+				6854EE5E1BCB58D3008AA40D /* AAPTransactionDirector.swift in Sources */,
 				68AFFB611BC591F700901C46 /* AppDelegate.swift in Sources */,
 				6892A6A21BC762FE00C3FEC6 /* ZFRippleButton.swift in Sources */,
 			);

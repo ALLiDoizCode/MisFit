@@ -12,8 +12,11 @@ class HomeCell: UITableViewCell {
     
     @IBOutlet weak var applePayBtn: ZFRippleButton!
     
+    @IBOutlet weak var cardPayBtn: ZFRippleButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         
         applePayBtn.imageView?.contentMode = UIViewContentMode.ScaleAspectFill
     }
