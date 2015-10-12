@@ -10,19 +10,16 @@ import UIKit
 import BTNavigationDropdownMenu
 import PassKit
 import Stripe
-import Parse
-import Bolts
-
 
 class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDelegate{
     
     @IBOutlet weak var tableView: UITableView!
     
     let items = ["Home", "Orders", "Account", "Logout"]
-    
     let SupportedPaymentNetworks = [PKPaymentNetworkVisa,PKPaymentNetworkMasterCard, PKPaymentNetworkAmex]
     let ApplePaySwagMerchantID = "merchant.com.getpizza"
-    
+    let presenter:Presenter = Presenter()
+    let navTo:Nav = Nav()
     
     override func viewWillAppear(animated: Bool) {
         
@@ -45,9 +42,7 @@ class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDele
                 
                 self.navigationController?.navigationBarHidden = true
                 
-                let logout = self.storyboard!.instantiateViewControllerWithIdentifier("logout") as! LoginViewController
-                
-                self.navigationController?.radialPushViewController(logout)
+                self.navTo.login(self.navigationController!)
            
                 
             }
@@ -78,7 +73,7 @@ class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDele
         
          cell.applePayBtn.hidden = !PKPaymentAuthorizationViewController.canMakePaymentsUsingNetworks(SupportedPaymentNetworks)
         
-        cell.cardPayBtn.addTarget(self, action: "goToCardPay", forControlEvents: .TouchUpInside)
+        cell.cardPayBtn.addTarget(self, action: "cardPay", forControlEvents: .TouchUpInside)
         cell.applePayBtn.addTarget(self, action: "goApplePay", forControlEvents: .TouchUpInside)
         
         return cell
@@ -89,12 +84,11 @@ class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDele
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
-    
-    func goToCardPay() {
+    func cardPay(){
         
-        let pay = self.storyboard!.instantiateViewControllerWithIdentifier("pay") as! PayViewController
-        self.navigationController?.radialPushViewController(pay)
+        navTo.goToCardPay(self.navigationController!)
     }
+   
     
     func goApplePay() {
         
@@ -118,43 +112,6 @@ class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDele
         
     }
     
-    func handleError(error: NSError) {
-        UIAlertView(title: "Please Try Again",
-            message: error.localizedDescription,
-            delegate: nil,
-            cancelButtonTitle: "OK").show()
-        
-    }
-    
-    func postStripeToken(token: STPToken) {
-        
-        let params = ["token": token.tokenId]
-        
-        PFCloud.callFunctionInBackground("hello", withParameters: params) { (Response, error) -> Void in
-            
-            if (error == nil) {
-                
-                print(Response)
-                
-                SweetAlert().showAlert("Charge Success", subTitle: "Thanks For Saving A Misfit Pizza!", style: AlertStyle.Success)
-                
-                
-                
-                
-                
-                
-            }else {
-                
-                print(Response)
-                
-                SweetAlert().showAlert("Something Went Wrong", subTitle: ":(", style: AlertStyle.Error)
-                
-                
-            }
-        }
-        
-    }
-    
     
     /*
     // MARK: - Navigation
@@ -170,25 +127,12 @@ class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDele
 
 
 extension HomeViewController: PKPaymentAuthorizationViewControllerDelegate {
-    func paymentAuthorizationViewController(controller: PKPaymentAuthorizationViewController!, didAuthorizePayment payment: PKPayment!, completion: ((PKPaymentAuthorizationStatus) -> Void)!) {
+    func paymentAuthorizationViewController(controller: PKPaymentAuthorizationViewController, didAuthorizePayment payment: PKPayment, completion: ((PKPaymentAuthorizationStatus) -> Void)) {
         
-        Stripe.createTokenWithPayment(payment) { (token: STPToken?, stripeError: NSError?) -> Void in
-            
-            if stripeError == nil {
-                
-                print("success")
-                self.postStripeToken(token!)
-            }else {
-                
-                print("something went wrong")
-                self.handleError(stripeError!)
-            }
-        }
-        
-        completion(PKPaymentAuthorizationStatus.Success)
+        presenter.applePay(payment,nav: self.navigationController!,completion: completion)
     }
     
-    func paymentAuthorizationViewControllerDidFinish(controller: PKPaymentAuthorizationViewController!) {
+    func paymentAuthorizationViewControllerDidFinish(controller: PKPaymentAuthorizationViewController) {
         controller.dismissViewControllerAnimated(true, completion: nil)
     }
     

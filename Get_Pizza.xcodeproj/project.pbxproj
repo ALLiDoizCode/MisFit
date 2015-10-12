@@ -23,6 +23,8 @@
 		68AFFB771BC591F800901C46 /* Get_PizzaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AFFB761BC591F800901C46 /* Get_PizzaTests.swift */; };
 		68AFFB811BC592E200901C46 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AFFB801BC592E200901C46 /* LoginViewController.swift */; };
 		68C3186F1BCB6C5D001ACB1D /* navHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C3186E1BCB6C5D001ACB1D /* navHome.swift */; settings = {ASSET_TAGS = (); }; };
+		68C318731BCBA162001ACB1D /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C318721BCBA162001ACB1D /* Presenter.swift */; settings = {ASSET_TAGS = (); }; };
+		68C318761BCBA489001ACB1D /* Nav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C318751BCBA489001ACB1D /* Nav.swift */; settings = {ASSET_TAGS = (); }; };
 		68FC269F1BC59BF00095361F /* CustomButtonOrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FC269E1BC59BF00095361F /* CustomButtonOrView.swift */; };
 		CC2CEBBD19A473BD6681AA61 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 334C1BF8D1F444BCE87CDAE7 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -62,6 +64,8 @@
 		68AFFB801BC592E200901C46 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		68C3186E1BCB6C5D001ACB1D /* navHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = navHome.swift; sourceTree = "<group>"; };
 		68C318701BCB7625001ACB1D /* Get_Pizza.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Get_Pizza.entitlements; sourceTree = "<group>"; };
+		68C318721BCBA162001ACB1D /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		68C318751BCBA489001ACB1D /* Nav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nav.swift; sourceTree = "<group>"; };
 		68FC269E1BC59BF00095361F /* CustomButtonOrView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonOrView.swift; sourceTree = "<group>"; };
 		F3C9101EF1F68A4ACB592A4F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +108,7 @@
 		686835101BC5DFB0005FBC96 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				68C318741BCBA452001ACB1D /* Nav */,
 				68609DE91BC72AD1004ADF65 /* Cells */,
 				68A8680F1BC5E1030094E918 /* LaunchScreen.xib */,
 				68A868101BC5E1030094E918 /* Main.storyboard */,
@@ -165,6 +170,7 @@
 		68AFFB5D1BC591F700901C46 /* Get_Pizza */ = {
 			isa = PBXGroup;
 			children = (
+				68C318711BCBA04C001ACB1D /* StripeClient */,
 				68C318701BCB7625001ACB1D /* Get_Pizza.entitlements */,
 				68AFFB601BC591F700901C46 /* AppDelegate.swift */,
 				686835101BC5DFB0005FBC96 /* UI */,
@@ -197,6 +203,22 @@
 				68AFFB751BC591F800901C46 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		68C318711BCBA04C001ACB1D /* StripeClient */ = {
+			isa = PBXGroup;
+			children = (
+				68C318721BCBA162001ACB1D /* Presenter.swift */,
+			);
+			path = StripeClient;
+			sourceTree = "<group>";
+		};
+		68C318741BCBA452001ACB1D /* Nav */ = {
+			isa = PBXGroup;
+			children = (
+				68C318751BCBA489001ACB1D /* Nav.swift */,
+			);
+			path = Nav;
 			sourceTree = "<group>";
 		};
 		A46BA99DACC3960A12A97D7D /* Pods */ = {
@@ -369,12 +391,14 @@
 			files = (
 				6868350F1BC5DF7E005FBC96 /* HomeViewController.swift in Sources */,
 				68609DEE1BC75367004ADF65 /* PayViewController.swift in Sources */,
+				68C318761BCBA489001ACB1D /* Nav.swift in Sources */,
 				681838C51BC8619C0063910E /* SweetAlert.swift in Sources */,
 				68C3186F1BCB6C5D001ACB1D /* navHome.swift in Sources */,
 				6854EE601BCB58D3008AA40D /* UIView+Radial.swift in Sources */,
 				6854EE5F1BCB58D3008AA40D /* UINavigationController+RadialTransaction.swift in Sources */,
 				68FC269F1BC59BF00095361F /* CustomButtonOrView.swift in Sources */,
 				68AFFB811BC592E200901C46 /* LoginViewController.swift in Sources */,
+				68C318731BCBA162001ACB1D /* Presenter.swift in Sources */,
 				68697B2E1BC5C0EE00DEA9C6 /* SignUpViewController.swift in Sources */,
 				68609DEB1BC72B15004ADF65 /* HomeCell.swift in Sources */,
 				6854EE5E1BCB58D3008AA40D /* AAPTransactionDirector.swift in Sources */,

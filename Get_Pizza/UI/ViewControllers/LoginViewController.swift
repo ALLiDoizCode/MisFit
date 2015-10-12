@@ -16,6 +16,8 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
 
     @IBOutlet weak var password: UITextField!
     
+    let navTo:Nav = Nav()
+    
     
     override func viewWillAppear(animated: Bool) {
         
@@ -27,7 +29,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         username.delegate = self
         password.delegate = self
         
-        login.addTarget(self, action: "goToHome", forControlEvents: .TouchUpInside)
+        login.addTarget(self, action: "homeScreen", forControlEvents: .TouchUpInside)
         
     
 }
@@ -44,12 +46,12 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         return true
     }
     
-    
-    func goToHome() {
+    func homeScreen(){
         
-        let home = self.storyboard!.instantiateViewControllerWithIdentifier("home") as! HomeViewController
-        self.navigationController?.radialPushViewController(home)
+        navTo.goToHome(self.navigationController!)
     }
+    
+    
     
     /*
     // MARK: - Navigation

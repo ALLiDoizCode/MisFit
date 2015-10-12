@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zje-k4-TUe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bOY-4L-GFg">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -11,7 +11,7 @@
         <!--Login View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController storyboardIdentifier="logout" id="vXZ-lx-hvc" customClass="LoginViewController" customModule="Get_Pizza" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" id="vXZ-lx-hvc" customClass="LoginViewController" customModule="Get_Pizza" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -289,16 +289,16 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="T08-1y-tGB"/>
+                    <navigationItem key="navigationItem" id="PEP-WK-aDD"/>
                     <connections>
-                        <outlet property="login" destination="tKj-LF-P5Q" id="DTW-qK-J95"/>
+                        <outlet property="login" destination="tKj-LF-P5Q" id="dos-l0-jJf"/>
                         <outlet property="password" destination="M2T-ld-pV7" id="6wI-hP-jFo"/>
                         <outlet property="username" destination="Kqa-As-hYp" id="86n-T3-NSv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="436.5" y="123.75"/>
+            <point key="canvasLocation" x="583.5" y="123.75"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="w9F-rz-I8V">
@@ -415,7 +415,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="zje-k4-TUe" kind="show" animates="NO" id="6qP-Uj-eVd"/>
+                                            <segue destination="bOY-4L-GFg" kind="show" animates="NO" id="6qP-Uj-eVd"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1003,17 +1003,22 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4242424242424242" placeholder="Card number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qOi-BM-OR4">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oj2-Uz-Yej">
                                         <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="05/35" placeholder="MM/YY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B19-a2-k58">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Card number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qOi-BM-OR4">
                                         <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="325" placeholder="CVC" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eQn-kw-XpH">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="MM/YY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B19-a2-k58">
+                                        <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="CVC" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eQn-kw-XpH">
                                         <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -1143,19 +1148,10 @@
                                             <action selector="pay:" destination="rOB-ER-mKt" eventType="touchUpInside" id="9h4-h8-W7Q"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Jonathan Green" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Pe-5S-BIl">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Pe-5S-BIl">
                                         <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="di3twater@gmail.com" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oj2-Uz-Yej">
-                                        <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <variation key="heightClass=regular-widthClass=compact">
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        </variation>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1653,6 +1649,7 @@
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="ZZ7-hw-NKS"/>
+                                        <exclude reference="Oj2-Uz-Yej"/>
                                         <exclude reference="qOi-BM-OR4"/>
                                         <exclude reference="B19-a2-k58"/>
                                         <exclude reference="eQn-kw-XpH"/>
@@ -1662,7 +1659,6 @@
                                         <exclude reference="6n4-Ce-vnv"/>
                                         <exclude reference="2eD-ko-Mkf"/>
                                         <exclude reference="6Pe-5S-BIl"/>
-                                        <exclude reference="Oj2-Uz-Yej"/>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="3YV-vb-HpI"/>
@@ -1872,9 +1868,11 @@
                                         <exclude reference="zmA-Mr-CS1"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="64" width="400" height="295"/>
                                     <mask key="subviews">
                                         <include reference="ZZ7-hw-NKS"/>
+                                        <include reference="Oj2-Uz-Yej"/>
                                         <include reference="qOi-BM-OR4"/>
                                         <include reference="B19-a2-k58"/>
                                         <include reference="eQn-kw-XpH"/>
@@ -1884,7 +1882,6 @@
                                         <include reference="6n4-Ce-vnv"/>
                                         <include reference="2eD-ko-Mkf"/>
                                         <include reference="6Pe-5S-BIl"/>
-                                        <include reference="Oj2-Uz-Yej"/>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="3YV-vb-HpI"/>
@@ -2100,9 +2097,7 @@
                         <constraints>
                             <constraint firstItem="2Ks-6m-BuQ" firstAttribute="width" secondItem="U7P-rz-fwe" secondAttribute="width" id="CdD-cr-Mkv"/>
                             <constraint firstItem="2Ks-6m-BuQ" firstAttribute="leading" secondItem="U7P-rz-fwe" secondAttribute="leading" id="as9-ih-7L3"/>
-                            <constraint firstItem="2Ks-6m-BuQ" firstAttribute="top" secondItem="PWx-wt-XCl" secondAttribute="bottom" id="e0B-PN-SJr">
-                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
-                            </constraint>
+                            <constraint firstItem="2Ks-6m-BuQ" firstAttribute="top" secondItem="PWx-wt-XCl" secondAttribute="bottom" id="e0B-PN-SJr"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -2125,7 +2120,6 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="ZM1-jr-vMr"/>
                     <connections>
                         <outlet property="cardLbl" destination="qOi-BM-OR4" id="Op0-lt-oBW"/>
                         <outlet property="cvcLbl" destination="eQn-kw-XpH" id="DIv-LT-Ema"/>
@@ -2138,51 +2132,27 @@
             </objects>
             <point key="canvasLocation" x="487" y="2229"/>
         </scene>
-        <!--Nav Home-->
-        <scene sceneID="RdM-bH-uW6">
-            <objects>
-                <navigationController storyboardIdentifier="navHome" automaticallyAdjustsScrollViewInsets="NO" id="f1I-lC-1yQ" customClass="navHome" customModule="Get_Pizza" customModuleProvider="target" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v27-Dc-1k6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.74117647058823533" green="0.29411764705882354" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="JED-Kf-NmB" kind="relationship" relationship="rootViewController" id="Bdh-A6-Kfy"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5sl-uT-mgt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-335" y="1269"/>
-        </scene>
         <!--Navigation Controller-->
-        <scene sceneID="vZ0-ao-Mhn">
+        <scene sceneID="BKl-TQ-HP0">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zje-k4-TUe" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bOY-4L-GFg" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iy7-id-jak">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WeO-CG-Eg4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.74117647060000003" green="0.29411764709999999" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.74117647060000003" green="0.29363729030000002" blue="0.15475987999999999" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Qjc-Nt-dBd"/>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="hH7-uI-KIA"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GVN-x3-8yg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qzb-3q-5Gz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-481.5" y="123.75"/>
+            <point key="canvasLocation" x="-334.5" y="123.75"/>
         </scene>
     </scenes>
     <resources>

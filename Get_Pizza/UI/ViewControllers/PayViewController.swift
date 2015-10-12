@@ -8,9 +8,6 @@
 
 import UIKit
 import Stripe
-import Alamofire
-import Parse
-import Bolts
 
 class PayViewController: UIViewController,UITableViewDelegate,UITextFieldDelegate,STPPaymentCardTextFieldDelegate {
     
@@ -23,6 +20,9 @@ class PayViewController: UIViewController,UITableViewDelegate,UITextFieldDelegat
     @IBOutlet weak var cvcLbl: UITextField!
     
     @IBOutlet weak var payBtn: ZFRippleButton!
+    
+    let presenter:Presenter = Presenter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -37,44 +37,8 @@ class PayViewController: UIViewController,UITableViewDelegate,UITextFieldDelegat
 
     @IBAction func pay(sender: AnyObject) {
         
-        // Initiate the card
-        let stripCard = STPCard()
-        
-        // Split the expiration date to extract Month & Year
-        if self.dateLbl.text!.isEmpty == false {
-            let expirationDate = self.dateLbl.text!.componentsSeparatedByString("/")
-            let expMonth = UInt(expirationDate[0])
-            let expYear = UInt(expirationDate[1])
-            
-            // Send the card info to Strip to get the token
-            stripCard.number = self.cardLbl.text
-            stripCard.cvc = self.cvcLbl.text
-            stripCard.expMonth = expMonth!
-            stripCard.expYear = expYear!
-        }
-        
-        
-        do {
-            try stripCard.validateCardReturningError()
-            STPAPIClient.sharedClient().createTokenWithCard(
-                stripCard,
-                completion: { (token: STPToken?, stripeError: NSError?) -> Void in
-                    
-                    if stripeError == nil {
-                        
-                       //print(token!)
-                        
-                        self.postStripeToken(token!)
-                        
-                    }else {
-                        
-                        self.handleError(stripeError!)
-                    }
-            })
-        } catch {
-            print("there is error.")
-        }
-        
+       
+        presenter.card(emailLbl,date: dateLbl,number: cardLbl,cvc: cvcLbl,nav: self.navigationController!)
        
 
     }
@@ -93,56 +57,13 @@ class PayViewController: UIViewController,UITableViewDelegate,UITextFieldDelegat
         return true
     }
     
-    func handleError(error: NSError) {
-        UIAlertView(title: "Please Try Again",
-            message: error.localizedDescription,
-            delegate: nil,
-            cancelButtonTitle: "OK").show()
-        
-    }
-    
-    func postStripeToken(token: STPToken) {
-        
-        let params = ["token": token.tokenId]
-
-        PFCloud.callFunctionInBackground("hello", withParameters: params) { (Response, error) -> Void in
-            
-            if (error == nil) {
-                
-                print(Response)
-                
-                SweetAlert().showAlert("Charge Success", subTitle: "Thanks For Saving A Misfit Pizza!", style: AlertStyle.Success) 
-                self.goToHome()
-                
-                
-                
-                
-                
-                }else {
-                
-                print(Response)
-                
-                SweetAlert().showAlert("Something Went Wrong", subTitle: ":(", style: AlertStyle.Error)
-                
-                
-            }
-        }
-
-    }
-    
-    func goToHome() {
-        
-        let home = self.storyboard!.instantiateViewControllerWithIdentifier("home") as! HomeViewController
-        self.navigationController?.radialPushViewController(home)
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
         
         
         }
-    
+   
     
 
     /*
