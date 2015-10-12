@@ -280,7 +280,7 @@ public class BTNavigationDropdownMenu: UIView {
         
         self.tableView.hidden = false
         self.topSeparator.hidden = false
-        self.backgroundView.hidden = true
+        self.backgroundView.hidden = false
         
         self.menuWrapper.frame.origin.y = self.navigationController!.navigationBar.frame.maxY
         

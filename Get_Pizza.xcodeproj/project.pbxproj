@@ -61,6 +61,7 @@
 		68AFFB761BC591F800901C46 /* Get_PizzaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Get_PizzaTests.swift; sourceTree = "<group>"; };
 		68AFFB801BC592E200901C46 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		68C3186E1BCB6C5D001ACB1D /* navHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = navHome.swift; sourceTree = "<group>"; };
+		68C318701BCB7625001ACB1D /* Get_Pizza.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Get_Pizza.entitlements; sourceTree = "<group>"; };
 		68FC269E1BC59BF00095361F /* CustomButtonOrView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonOrView.swift; sourceTree = "<group>"; };
 		F3C9101EF1F68A4ACB592A4F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,6 +165,7 @@
 		68AFFB5D1BC591F700901C46 /* Get_Pizza */ = {
 			isa = PBXGroup;
 			children = (
+				68C318701BCB7625001ACB1D /* Get_Pizza.entitlements */,
 				68AFFB601BC591F700901C46 /* AppDelegate.swift */,
 				686835101BC5DFB0005FBC96 /* UI */,
 				68AFFB671BC591F700901C46 /* Images.xcassets */,
@@ -260,6 +262,12 @@
 				TargetAttributes = {
 					68AFFB5A1BC591F700901C46 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 2K5QEB378V;
+						SystemCapabilities = {
+							com.apple.OMC = {
+								enabled = 1;
+							};
+						};
 					};
 					68AFFB6F1BC591F800901C46 = {
 						CreatedOnToolsVersion = 6.4;
@@ -480,9 +488,18 @@
 			baseConfigurationReference = 68000A5B157CA4AE4F9279AD /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Get_Pizza/Get_Pizza.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					STRIPE_ENABLE_APPLEPAY,
+				);
 				INFOPLIST_FILE = Get_Pizza/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = /Users/Jonathan_Green/Documents/Get_Pizza/Header.h;
 			};
 			name = Debug;
@@ -492,9 +509,18 @@
 			baseConfigurationReference = F3C9101EF1F68A4ACB592A4F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Get_Pizza/Get_Pizza.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					STRIPE_ENABLE_APPLEPAY,
+				);
 				INFOPLIST_FILE = Get_Pizza/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = /Users/Jonathan_Green/Documents/Get_Pizza/Header.h;
 			};
 			name = Release;

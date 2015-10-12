@@ -111,7 +111,11 @@ class PayViewController: UIViewController,UITableViewDelegate,UITextFieldDelegat
                 
                 print(Response)
                 
-                SweetAlert().showAlert("Charge Success", subTitle: "Thanks For Saving A Misfit Pizza!", style: AlertStyle.Success)
+                SweetAlert().showAlert("Charge Success", subTitle: "Thanks For Saving A Misfit Pizza!", style: AlertStyle.Success) 
+                self.goToHome()
+                
+                
+                
                 
                 
                 }else {
@@ -125,6 +129,13 @@ class PayViewController: UIViewController,UITableViewDelegate,UITextFieldDelegat
         }
 
     }
+    
+    func goToHome() {
+        
+        let home = self.storyboard!.instantiateViewControllerWithIdentifier("home") as! HomeViewController
+        self.navigationController?.radialPushViewController(home)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

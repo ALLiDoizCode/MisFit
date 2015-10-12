@@ -8,6 +8,10 @@
 
 import UIKit
 import BTNavigationDropdownMenu
+import PassKit
+import Stripe
+import Parse
+import Bolts
 
 
 class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDelegate{
@@ -15,6 +19,9 @@ class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDele
     @IBOutlet weak var tableView: UITableView!
     
     let items = ["Home", "Orders", "Account", "Logout"]
+    
+    let SupportedPaymentNetworks = [PKPaymentNetworkVisa,PKPaymentNetworkMasterCard, PKPaymentNetworkAmex]
+    let ApplePaySwagMerchantID = "merchant.com.getpizza"
     
     
     override func viewWillAppear(animated: Bool) {
@@ -69,9 +76,10 @@ class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDele
         
         let cell = tableView.dequeueReusableCellWithIdentifier("homeCell") as! HomeCell
         
-        cell.cardPayBtn.addTarget(self, action: "goToCardPay", forControlEvents: .TouchUpInside)
+         cell.applePayBtn.hidden = !PKPaymentAuthorizationViewController.canMakePaymentsUsingNetworks(SupportedPaymentNetworks)
         
-    
+        cell.cardPayBtn.addTarget(self, action: "goToCardPay", forControlEvents: .TouchUpInside)
+        cell.applePayBtn.addTarget(self, action: "goApplePay", forControlEvents: .TouchUpInside)
         
         return cell
     }
@@ -88,6 +96,65 @@ class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDele
         self.navigationController?.radialPushViewController(pay)
     }
     
+    func goApplePay() {
+        
+        let request = PKPaymentRequest()
+        request.merchantIdentifier = ApplePaySwagMerchantID
+        request.supportedNetworks = SupportedPaymentNetworks
+        //request.requiredShippingAddressFields = PKAddressField.All
+        request.merchantCapabilities = PKMerchantCapability.Capability3DS
+        request.countryCode = "US"
+        request.currencyCode = "USD"
+        
+        request.paymentSummaryItems = [
+            PKPaymentSummaryItem(label: "type of pizza goes here", amount: 5),
+        ]
+        
+        let applePayController = PKPaymentAuthorizationViewController(paymentRequest: request)
+        
+        applePayController.delegate = self
+        
+        self.presentViewController(applePayController, animated: true, completion: nil)
+        
+    }
+    
+    func handleError(error: NSError) {
+        UIAlertView(title: "Please Try Again",
+            message: error.localizedDescription,
+            delegate: nil,
+            cancelButtonTitle: "OK").show()
+        
+    }
+    
+    func postStripeToken(token: STPToken) {
+        
+        let params = ["token": token.tokenId]
+        
+        PFCloud.callFunctionInBackground("hello", withParameters: params) { (Response, error) -> Void in
+            
+            if (error == nil) {
+                
+                print(Response)
+                
+                SweetAlert().showAlert("Charge Success", subTitle: "Thanks For Saving A Misfit Pizza!", style: AlertStyle.Success)
+                
+                
+                
+                
+                
+                
+            }else {
+                
+                print(Response)
+                
+                SweetAlert().showAlert("Something Went Wrong", subTitle: ":(", style: AlertStyle.Error)
+                
+                
+            }
+        }
+        
+    }
+    
     
     /*
     // MARK: - Navigation
@@ -100,3 +167,30 @@ class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDele
     */
 
 }
+
+
+extension HomeViewController: PKPaymentAuthorizationViewControllerDelegate {
+    func paymentAuthorizationViewController(controller: PKPaymentAuthorizationViewController!, didAuthorizePayment payment: PKPayment!, completion: ((PKPaymentAuthorizationStatus) -> Void)!) {
+        
+        Stripe.createTokenWithPayment(payment) { (token: STPToken?, stripeError: NSError?) -> Void in
+            
+            if stripeError == nil {
+                
+                print("success")
+                self.postStripeToken(token!)
+            }else {
+                
+                print("something went wrong")
+                self.handleError(stripeError!)
+            }
+        }
+        
+        completion(PKPaymentAuthorizationStatus.Success)
+    }
+    
+    func paymentAuthorizationViewControllerDidFinish(controller: PKPaymentAuthorizationViewController!) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+}
+
